@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:niu/config/colors.dart';
+import 'package:niu/features/screens/login_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const NiuApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class NiuApp extends StatelessWidget {
+  const NiuApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hi World'),
-        ),
+    return MaterialApp(
+      title: 'niu app',
+      theme: ThemeData(
+        fontFamily: 'Lato',
+        scaffoldBackgroundColor: creme,
       ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        // més rutes per afegir
+      },
     );
   }
 }
