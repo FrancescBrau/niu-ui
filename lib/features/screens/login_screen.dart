@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:niu/config/colors.dart';
 import 'package:niu/config/sizes.dart';
+import 'package:niu/features/screens/forgot_password.dart';
+import 'package:niu/features/screens/registration_screen.dart';
 import 'package:niu/features/widgets/login_button.dart';
 import 'package:niu/features/widgets/login_text_flied.dart';
-import 'package:niu/main.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,17 +21,39 @@ class LoginScreen extends StatelessWidget {
             normalVerticalSpacing,
             const LoginTextField(),
             normalVerticalSpacing,
-            const LoginTextField(),
-            normalVerticalSpacing,
             LoginButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const NiuApp(),
-                  ));
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      '/home', (Route<dynamic> route) => false);
                 },
                 child: const Text("Login")),
-            const Text("Forgot Password"),
-            const Text("Need an account?"),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ForgotPasswordScreen()),
+                  );
+                },
+                style: TextButton.styleFrom(
+                  foregroundColor: noir,
+                ),
+                child: const Text("Forgot Password")),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RegistrationScreen()),
+                  );
+                },
+                style: TextButton.styleFrom(
+                  foregroundColor: noir,
+                  textStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline),
+                ),
+                child: const Text("Need an account? Create here")),
           ],
         ),
       ),

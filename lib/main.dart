@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
+import 'package:niu/features/screens/home_screen.dart';
 import 'package:niu/features/screens/login_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class NiuApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginScreen(),
-        // més rutes per afegir
+        '/home': (context) => const HomeScreen(),
       },
     );
   }

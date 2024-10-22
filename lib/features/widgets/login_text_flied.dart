@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:niu/features/widgets/login_button.dart';
 
 class LoginTextField extends StatelessWidget {
-  final bool isPassword;
-  const LoginTextField({super.key, this.isPassword = false});
+  const LoginTextField({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
-      child: TextField(
-        obscureText: isPassword,
-        decoration: const InputDecoration(
-          hintText: "*******",
-        ),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 32),
+      child: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              hintText: "E-mail",
+            ),
+          ),
+          SizedBox(height: 16),
+          TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              hintText: "Password",
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -4,8 +4,8 @@ import 'package:niu/config/sizes.dart';
 import 'package:niu/features/screens/login_screen.dart';
 import 'package:niu/features/widgets/login_button.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({super.key});
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class RegistrationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Create an account',
+              'Restore your account',
               style: TextStyle(
                 fontSize: bigTextSize,
                 fontWeight: FontWeight.bold,
@@ -52,16 +52,34 @@ class RegistrationScreen extends StatelessWidget {
               ],
             ),
             normalVerticalSpacing,
-            const Text('Email'),
+            const Text('E-mail'),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter your email',
+                hintText: 'Enter your E-mail',
               ),
             ),
             normalVerticalSpacing,
-            const Text('Password'),
+            const Text('OTP'),
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter your OTP sent to your E-mail',
+              ),
+            ),
+            normalVerticalSpacing,
+            const Text('New Password'),
+            TextFormField(
+              obscureText: true,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter your password',
+              ),
+            ),
+            normalVerticalSpacing,
+            const Text('Confirm Password'),
             TextFormField(
               obscureText: true,
               decoration: const InputDecoration(
@@ -76,7 +94,7 @@ class RegistrationScreen extends StatelessWidget {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                         '/home', (Route<dynamic> route) => false);
                   },
-                  child: const Text("Create account")),
+                  child: const Text("Restore account")),
             )
           ],
         ),
