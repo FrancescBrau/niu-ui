@@ -14,7 +14,11 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: creme,
         title: const Align(
           alignment: Alignment.centerLeft,
-          child: Text('Profile'),
+          child: Text(
+            '  Profile',
+            style: TextStyle(
+                fontFamily: 'LibreBaskerville', fontSize: normalTextSize),
+          ),
         ),
       ),
       body: const Padding(
