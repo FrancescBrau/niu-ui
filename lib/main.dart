@@ -18,7 +18,7 @@ class NiuApp extends StatelessWidget {
         fontFamily: 'Lato',
         scaffoldBackgroundColor: creme,
       ),
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         '/': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
