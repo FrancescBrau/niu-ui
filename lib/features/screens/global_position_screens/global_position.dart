@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
 import 'package:niu/config/sizes.dart';
-import 'package:niu/features/screens/global_position_screens/account_screen.dart';
-import 'package:niu/features/screens/global_position_screens/alerts_screen.dart';
-import 'package:niu/features/screens/global_position_screens/contracts_screen.dart';
-import 'package:niu/features/screens/global_position_screens/mailbox_screen.dart';
-import 'package:niu/features/screens/global_position_screens/tenats_screen.dart';
+import 'package:niu/features/screens/global_position_screens/account_folder/account_screen.dart';
+import 'package:niu/features/screens/global_position_screens/alert_foulder/alerts_screen.dart';
+import 'package:niu/features/screens/global_position_screens/contracts_foulder/contracts_screen.dart';
+import 'package:niu/features/screens/global_position_screens/mailbox_foulder/mailbox_screen.dart';
+import 'package:niu/features/screens/global_position_screens/tenants_foulder/tenats_screen.dart';
 import 'package:niu/features/widgets/custom_card.dart';
-import 'package:niu/features/screens/global_position_screens/propertie_screen.dart';
+import 'package:niu/features/screens/global_position_screens/property_folder/propertie_screen.dart';
 
 class GlobalPositionScreen extends StatelessWidget {
   const GlobalPositionScreen({super.key});
@@ -36,8 +36,15 @@ class GlobalPositionScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const PropertieScreen(
-                      title: 'Properties', content: 'Here is more information'),
+                  builder: (context) => PropertieScreen(
+                    title: 'Properties',
+                    squareMeters: 0,
+                    rooms: 0,
+                    bathrooms: 0,
+                    wc: 0,
+                    description: '',
+                    onTap: () {},
+                  ),
                 ),
               );
             },

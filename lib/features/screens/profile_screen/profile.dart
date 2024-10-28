@@ -5,6 +5,10 @@ import 'package:niu/config/sizes.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
+  void _logout(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +24,25 @@ class ProfileScreen extends StatelessWidget {
                 fontFamily: 'LibreBaskerville', fontSize: normalTextSize),
           ),
         ),
+        iconTheme: const IconThemeData(
+          color: noir,
+        ),
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert),
+            onSelected: (String result) {
+              if (result == 'logout') {
+                _logout(context);
+              }
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+              const PopupMenuItem<String>(
+                value: 'logout',
+                child: Text('Log out'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: const Padding(
         padding: EdgeInsets.all(32.0),

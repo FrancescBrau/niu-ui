@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
 import 'package:niu/config/sizes.dart';
-import 'package:niu/features/screens/forgot_password.dart';
-import 'package:niu/features/screens/registration_screen.dart';
+import 'package:niu/features/screens/open_apps_screen/forgot_password.dart';
+import 'package:niu/features/screens/open_apps_screen/registration_screen.dart';
 import 'package:niu/features/widgets/login_button.dart';
 import 'package:niu/features/widgets/login_text_flied.dart';
 

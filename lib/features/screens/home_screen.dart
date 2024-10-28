@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
-import 'package:niu/features/screens/global_position.dart';
-import 'package:niu/features/screens/profile.dart';
+import 'package:niu/features/screens/global_position_screens/global_position.dart';
+import 'package:niu/features/screens/profile_screen/profile.dart';
 import 'package:niu/features/widgets/navigationbarapp.dart';
 
 class HomeScreen extends StatefulWidget {
