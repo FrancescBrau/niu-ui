@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
 import 'package:niu/config/sizes.dart';
-import 'package:niu/features/screens/open_apps_screen/login_screen.dart';
+import 'package:niu/features/screens/auth/login_screen.dart';
 import 'package:niu/features/widgets/login_button.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({super.key});
+class RegistrationScreen extends StatelessWidget {
+  const RegistrationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ForgotPasswordScreen extends StatelessWidget {
           image: AssetImage('assets/images/appbar.png'),
         ),
         backgroundColor: creme,
-        shadowColor: pedra,
+        shadowColor: grey1,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -24,7 +24,7 @@ class ForgotPasswordScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Restore your account',
+              'Create an account',
               style: TextStyle(
                 fontSize: bigTextSize,
                 fontWeight: FontWeight.bold,
@@ -52,34 +52,16 @@ class ForgotPasswordScreen extends StatelessWidget {
               ],
             ),
             normalVerticalSpacing,
-            const Text('E-mail'),
+            const Text('Email'),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Enter your E-mail',
+                hintText: 'Enter your email',
               ),
             ),
             normalVerticalSpacing,
-            const Text('OTP'),
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter your OTP sent to your E-mail',
-              ),
-            ),
-            normalVerticalSpacing,
-            const Text('New Password'),
-            TextFormField(
-              obscureText: true,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter your password',
-              ),
-            ),
-            normalVerticalSpacing,
-            const Text('Confirm Password'),
+            const Text('Password'),
             TextFormField(
               obscureText: true,
               decoration: const InputDecoration(
@@ -94,7 +76,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                         '/home', (Route<dynamic> route) => false);
                   },
-                  child: const Text("Restore account")),
+                  child: const Text("Create account")),
             )
           ],
         ),

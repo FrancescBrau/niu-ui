@@ -20,15 +20,15 @@ class AddButton extends StatelessWidget {
         height: 50,
         child: FloatingActionButton.extended(
           onPressed: onPressed,
-          backgroundColor: marro,
+          backgroundColor: brown1,
           icon: const Icon(
             Icons.add,
-            color: pedraBlanca,
+            color: lightgrey1,
           ),
           label: Text(
             label,
             style: const TextStyle(
-              color: pedraBlanca,
+              color: lightgrey1,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),

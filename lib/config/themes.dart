@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
-import 'package:niu/config/sizes.dart';
 
 final ThemeData lightTheme = ThemeData(
-  fontFamily: "Lato",
+  appBarTheme: const AppBarTheme(
+      backgroundColor: creme,
+      iconTheme: IconThemeData(color: black1),
+      titleTextStyle: TextStyle(color: black1)),
+  brightness: Brightness.light,
+  primaryColor: black1,
+  scaffoldBackgroundColor: creme2,
   textTheme: const TextTheme(
-    bodyMedium: TextStyle(fontSize: normalTextSize),
-    headlineMedium: TextStyle(fontSize: bigTextSize),
-    bodySmall: TextStyle(fontSize: smallTextSize),
+    bodyLarge: TextStyle(color: black1),
+    bodyMedium: TextStyle(color: Colors.black54),
   ),
-  scaffoldBackgroundColor: creme,
+);
+
+final ThemeData darkTheme = ThemeData(
+  appBarTheme: const AppBarTheme(
+      backgroundColor: black3,
+      iconTheme: IconThemeData(color: grey1),
+      titleTextStyle: TextStyle(color: lightgrey1)),
+  brightness: Brightness.dark,
+  primaryColor: lightgrey1,
+  scaffoldBackgroundColor: black1,
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: lightgrey1),
+    bodyMedium: TextStyle(color: lightgrey2),
+  ),
 );

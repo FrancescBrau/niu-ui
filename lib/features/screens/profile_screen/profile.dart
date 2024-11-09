@@ -87,7 +87,7 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: pedraBlanca,
+      backgroundColor: lightgrey1,
     );
   }
 }

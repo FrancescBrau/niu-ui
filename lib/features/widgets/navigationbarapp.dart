@@ -13,7 +13,7 @@ class NavigationBarNiu extends StatelessWidget {
     return BottomNavigationBar(
       backgroundColor: creme,
       selectedItemColor: noir,
-      unselectedItemColor: marro,
+      unselectedItemColor: brown1,
       currentIndex: currentIndex,
       onTap: onTap,
       items: const [

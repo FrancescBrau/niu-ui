@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:niu/config/colors.dart';
 import 'package:niu/features/screens/home_screen.dart';
-import 'package:niu/features/screens/open_apps_screen/login_screen.dart';
+import 'package:niu/features/screens/auth/login_screen.dart';
 
 void main() {
   runApp(const NiuApp());

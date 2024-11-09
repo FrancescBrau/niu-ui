@@ -126,7 +126,7 @@ class GlobalPositionScreen extends StatelessWidget {
           )
         ],
       ),
-      backgroundColor: marro,
+      backgroundColor: brown1,
     );
   }
 }

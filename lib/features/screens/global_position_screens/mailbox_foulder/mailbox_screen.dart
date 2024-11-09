@@ -82,11 +82,11 @@ class _MailboxScreenState extends State<MailboxScreen> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _showMessagePopup,
-        backgroundColor: pedraBlanca,
-        icon: const Icon(Icons.message, color: marro),
+        backgroundColor: lightgrey1,
+        icon: const Icon(Icons.message, color: brown1),
         label: const Text(
           'Send a Message',
-          style: TextStyle(color: marro),
+          style: TextStyle(color: brown1),
         ),
       ),
     );
